@@ -1,22 +1,28 @@
-# Credit-card-fraud-detection
-## Overview
-This project aims to detect fraudulent transactions in credit card data using machine learning algorithms. It involves preprocessing the data, training various classification models, and evaluating their performance.
+# Credit Card Fraud Detection Project
+**Project Overview**
+![image](https://github.com/user-attachments/assets/750f01de-46d2-4324-be06-ac9875e4459e)
 
-## Dataset
-The dataset used in this project contains credit card transactions labeled as fraudulent or legitimate. It consists of features such as transaction amount, time, and anonymized numerical features obtained from PCA.
+The Credit Card Fraud Detection project focuses on developing a robust machine learning model to identify fraudulent transactions. This project includes data preprocessing, exploratory data analysis, feature engineering, model selection, hyperparameter tuning, and performance evaluation.
 
-## Installation
-To run the code in this project, follow these steps:
+**Key Features**
 
-Clone this repository to your local machine.
-Install the required dependencies listed in the requirements.txt file using pip:
-Copy code
-pip install -r requirements.txt
-Usage
-*Preprocessing:* Run the preprocess_data.py script to preprocess the dataset. This script handles tasks such as handling missing values, scaling features, and splitting the data into training and testing sets.
+* **Data Preprocessing:** Cleaned and explored the dataset to handle class imbalance and prepare it for modeling.
+* **Feature Engineering:** Applied techniques to extract meaningful features and used outlier detection methods (IQR and Box-Cox transformation) to enhance model performance.
+* **Model Selection:** Evaluated and compared multiple algorithms including Logistic Regression, Random Forest, and XGBoost.
+* **Hyperparameter Tuning:** Optimized model performance using GridSearchCV and RandomizedSearchCV.
+* **Performance Evaluation:** Assessed models using metrics like Precision, Accuracy, F1-score, and ROC-AUC.
 
-*Training:* Train the machine learning models using the train_models.py script. This script trains multiple classification models, including logistic regression, random forest, and XGBoost, and saves the best-performing model.
+**Best Model**
 
-*Evaluation:* Evaluate the performance of the trained models using the evaluate_models.py script. This script calculates metrics such as accuracy, precision, recall, and F1-score for each model on the test dataset.
+* Model: XGBoost (Optimized)
+* Training Precision: 0.954955
+* Testing Precision: 0.925373
+* Training Accuracy: 0.999648
+* Testing Accuracy: 0.999418
+* Training F1-score: 0.888268
+* Testing F1-score: 0.789809
+XGBoost (Optimized) showed the best balance of precision and performance across training and testing datasets, making it the most effective model for this project.
 
-*Deployment:* Deploy the best-performing model for inference using the deploy_model.py script. This script loads the saved model and makes predictions on new data.
+**Future Work**
+Regularly update and re-evaluate models to adapt to evolving fraud patterns.
+Explore additional feature engineering and advanced algorithms for further improvement.
